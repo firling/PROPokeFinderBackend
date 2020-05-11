@@ -1,0 +1,18 @@
+version: '3.5' 
+
+services:
+  backend:
+    networks:
+      - pokemonfinder
+    image: node:10.7.0-alpine
+    container_name: backend
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
+    volumes:
+      - $PWD:/app
+    command: sh -c "cd /app && npm run start" 
+
+networks:
+  pokemonfinder:
+    name: pokemonfinder

@@ -1,0 +1,130 @@
+openapi: 3.0.1
+info:
+  title: Poke Backend
+  version: 1.0.0
+paths:
+  '/getEvent':
+    get:
+      operationId: getEvent
+      x-exegesis-controller: controller
+      responses:
+        200:
+          description: idk
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - message
+                properties:
+                  message:
+                    type: string
+  '/getCompendium':
+    get:
+      operationId: getCompendium
+      x-exegesis-controller: controller
+      responses:
+        200:
+          description: idk
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - message
+                properties:
+                  message:
+                    type: string
+  '/getPokeInDaList':
+     get:
+       operationId: getPokeInDaList
+       x-exegesis-controller: controller
+       parameters:
+        - description: type of the Pokemon
+          name: type
+          in: query
+          schema:
+            type: string
+        - description: role of the Pokemon
+          name: role
+          in: query
+          schema:
+            type: string
+       responses:
+         200:
+           description: idk
+           content:
+             application/json:
+               schema:
+                 type: object
+                 required:
+                   - message
+                 properties:
+                   message:
+                     type: string
+  '/getPokeSet':
+     get:
+       operationId: getPokeSet
+       x-exegesis-controller: controller
+       parameters:
+        - description: name of the Pokemon
+          name: pokename
+          in: query
+          schema:
+            type: string
+       responses:
+         200:
+           description: idk
+           content:
+             application/json:
+               schema:
+                 type: object
+                 required:
+                   - message
+                 properties:
+                   message:
+                     type: string
+  '/getPokeSpawn':
+     get:
+       operationId: getPokeSpawn
+       x-exegesis-controller: controller
+       parameters:
+        - description: name of the Pokemon
+          name: pokename
+          in: query
+          schema:
+            type: string
+       responses:
+         200:
+           description: idk
+           content:
+             application/json:
+               schema:
+                 type: object
+                 required:
+                   - message
+                 properties:
+                   message:
+                     type: string
+  '/getPokeInDaListWithName':
+     get:
+       operationId: getPokeInDaListWithName
+       x-exegesis-controller: controller
+       parameters:
+        - description: name of the Pokemon
+          name: pokename
+          in: query
+          schema:
+            type: string
+       responses:
+         200:
+           description: idk
+           content:
+             application/json:
+               schema:
+                 type: object
+                 required:
+                   - message
+                 properties:
+                   message:
+                     type: string
